@@ -1,0 +1,34 @@
+###Getting Service document
+GET http://localhost:4004/odata/v4/CatalogService
+###Getting Service document metadata
+GET http://localhost:4004/odata/v4/CatalogService/$metadata
+###Getting Service Entity Data - Purchase orders
+GET http://localhost:4004/odata/v4/CatalogService/POs
+###Getting Service Entity Data - Single Purchase orders
+GET http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC30052
+###Test Boost action
+POST http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC30052/CatalogService.boost
+Content-Type: application/json
+
+{}
+
+###Calling read only entity
+POST http://localhost:4004/odata/v4/my/ReadEmployeeSrv
+Content-Type: application/json
+
+{
+    "nameFirst": "Kavitha",
+    "nameMiddle": "",
+    "nameLast": "N",
+    "nameInitials": null,
+    "sex": "F",
+    "language": "E",
+    "phoneNumber": null,
+    "email": "kavitha.m@ibm.com",
+    "loginName": "KAVITHAM",
+    "Currency_code": "USD",
+    "salaryAmount": 99999,
+    "accountNumber": "8877665544",
+    "bankId": "121000",
+    "bankName": "State Bank of India"
+}
